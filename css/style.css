@@ -15,6 +15,7 @@ nav ul {
     display: flex;
     justify-content: center;
     list-style: none;
+    padding: 0;
 }
 
 nav ul li {
@@ -34,6 +35,33 @@ main article h1{
 main article p{
     font-size: 1.2em;
     line-height: 1.5em;
+}
+article a{
+    text-decoration: none;
+    margin: 0 1em;
+}
+article a:last-child{
+    margin: 0;
+}
+article a section{
+    background-color: #2C3639;
+    box-shadow: -3px -3px 7px #384448, 3px 3px 5px #202729;
+    padding: 1em;
+    border-radius: 10px;
+    height: fit-content;
+    transition: 0.3s;
+}
+article a section:hover{
+    background-color: #303b3e;
+    box-shadow: -3px -3px 7px #384448, 3px 3px 5px #202729;
+}
+article a section h2{
+    margin: 0;
+    font-size: 1.5em;
+}
+article a section p{
+    /*Margin top 1em and the rest all 0*/
+    margin: 1em 0 0 0;
 }
 
 footer{

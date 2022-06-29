@@ -1,16 +1,43 @@
 /* 
-    https://colorhunt.co/palette/2c36393f4e4fa27b5cdcd7c9 
     https://colorhunt.co/palettes/dark
+    https://colorhunt.co/palette/2c36393f4e4fa27b5cdcd7c9
+    https://colorhunt.co/palette/c2ded1ece5c7cdc2ae354259
+    
 */
+:root[data-theme="dark"] {
+    --main-color:       hsl(194, 13%, 20%);
+    --main-color-hover: hsl(194, 13%, 22%);
+    --main-shadow-light:hsl(194, 13%, 25%);
+    --main-shadow-dark: hsl(194, 13%, 14%);
+
+    --secondary-color:  hsl(27, 28%, 50%);
+    --third-color:      hsl(184, 11%, 28%);
+
+    --font-color:       hsl(44, 21%, 83%);
+}
+
+:root[data-theme="light"] {
+    --main-color:       hsl(152, 30%, 82%);
+    --main-color-hover: hsl(152, 30%, 90%);
+    --main-shadow-light:hsl(152, 30%, 88%);
+    --main-shadow-dark: hsl(152, 30%, 76%);
+
+    --secondary-color:  hsl(39, 24%, 74%);
+    --third-color:      hsl(49, 49%, 85%);
+
+    --font-color:       hsl(218, 25%, 28%);
+}
+
 body {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    background-color: #2C3639;
-    color: #DCD7C9;
+    background-color: var(--main-color);
+    color: var(--font-color);
     max-width: 800px;
     height: 100vmin;
     margin: 0 auto;
     padding: 0 20px;
 }
+
 nav ul {
     display: flex;
     justify-content: center;
@@ -21,67 +48,87 @@ nav ul {
 nav ul li {
     padding: 0.5em;
     list-style: none;
+    height: fit-content;
 }
-nav ul li a{
+
+nav ul li a {
     transition: 0.3s;
 }
-nav ul li a:hover{
-    box-shadow: -3px -3px 7px #384448, 3px 3px 5px #202729;
+
+nav ul li a:hover {
+    box-shadow: -3px -3px 7px var(--main-shadow-light), 3px 3px 5px var(--main-shadow-dark);
     border-radius: 5px;
     padding: 5px;
 }
+nav ul li button{
+    background-color: var(--main-color);
+    border-radius: 5px;
+    border: none;
+}
+nav ul:last-child{
+    padding-top: 0;
+}
 
 main {
-    border: #A27B5C 4px solid;
+    border: var(--secondary-color) 4px solid;
     padding: 1em;
     border-radius: 10px;
     height: max-content;
 }
-main article h1{
+
+main article h1 {
     margin: 0;
     font-size: 1.5em;
 }
-main article p{
+
+main article p {
     font-size: 1.2em;
     line-height: 1.5em;
 }
-article a{
+
+article a {
     text-decoration: none;
     margin: 0 1em;
 }
-article a:last-child{
+
+article a:last-child {
     margin: 0;
 }
-article a section{
-    background-color: #2C3639;
-    box-shadow: -3px -3px 7px #384448, 3px 3px 5px #202729;
+
+article a section {
+    background-color: var(--main-color);
+    box-shadow: -3px -3px 7px var(--main-shadow-light), 3px 3px 5px var(--main-shadow-dark);
     padding: 1em;
     border-radius: 10px;
     height: fit-content;
     transition: 0.3s;
 }
-article a section:hover{
-    background-color: #303b3e;
-    box-shadow: -3px -3px 7px #384448, 3px 3px 5px #202729;
+
+article a section:hover {
+    background-color: var(--main-color-hover);
+    box-shadow: -3px -3px 7px var(--main-shadow-light), 3px 3px 5px var(--main-shadow-dark);
 }
-article a section h2{
+
+article a section h2 {
     margin: 0;
     font-size: 1.5em;
 }
-article a section p{
+
+article a section p {
     /*Margin top 1em and the rest all 0*/
     margin: 1em 0 0 0;
 }
 
-footer{
+footer {
     display: flex;
     justify-content: center;
 }
+
 footer ul li {
     list-style: none;
 }
 
 a {
     text-decoration: underline;
-    color: #DCD7C9;
+    color: var(--font-color);
 }
